@@ -5,7 +5,7 @@ import { join, relative, basename, extname } from "node:path";
 
 const SITE_ID       = "c1e0ce9a-17ec-471f-b7c8-1a7feb623274";
 const COLLECTION    = "BlogPosts";
-const BLOG_BASE_URL = "https://blog-wix-headless.ltpu.net";
+const BLOG_BASE_URL = "https://blog.ltpu.net";
 const BLOG_DIR      = process.env.BLOG_DIR ?? "/Users/antonkol/my_projects/blog/blog";
 const HTML_DIR      = join(BLOG_DIR, "target/classes");
 const DOC_DIR       = join(BLOG_DIR, "src/main/doc");

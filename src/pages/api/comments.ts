@@ -3,17 +3,16 @@ import type { APIRoute } from "astro";
 const SITE_ID    = "c1e0ce9a-17ec-471f-b7c8-1a7feb623274";
 const CLIENT_ID  = "eb06cb34-e5e1-4c04-b372-1928a615bfeb";
 const COLLECTION = "Comments";
-const BLOG_BASE  = "https://blog-wix-headless.ltpu.net";
+const BLOG_BASE = "https://blog.ltpu.net";
 
 const ALLOWED_ORIGINS = [
   "https://blog.ltpu.net",
-  "https://blog-wix-headless.ltpu.net",
 ];
 
 function corsHeaders(requestOrigin: string | null): Record<string, string> {
   const origin = requestOrigin && ALLOWED_ORIGINS.includes(requestOrigin)
     ? requestOrigin
-    : ALLOWED_ORIGINS[2];
+    : ALLOWED_ORIGINS[1];
   return {
     "Access-Control-Allow-Origin":  origin,
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
